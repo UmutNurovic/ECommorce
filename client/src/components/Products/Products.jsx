@@ -3,7 +3,7 @@ import {Grid} from '@material-ui/core';
 import Product from './Product/Product';
 import useStyles from './style';
 
-const Products = ({ products })=>{
+const Products = ({ products , onAddToCard })=>{
     const classes = useStyles();
     if (!products.length) return <p>Loading...</p>;
 
@@ -13,7 +13,7 @@ const Products = ({ products })=>{
         <Grid container justifyContent="center" spacing={4}>
           {products.map((product) => (
             <Grid key={product.id} item xs={12} sm={6} md={4} lg={3}>
-              <Product product={product} />
+              <Product product={product} onAddToCard={onAddToCard} />
             </Grid>
           ))}
         </Grid>
