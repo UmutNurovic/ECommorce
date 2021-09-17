@@ -31,7 +31,9 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
         }
       };
 
+      
       generateToken();
+
     }
   }, [cart]);
 
